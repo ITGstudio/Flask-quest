@@ -60,7 +60,8 @@ def index():
 
 
 # если запущен файл, считываем JSON
-with open(r'static/movie-sessions-full.json', encoding='UTF-8') as f:
+
+with open(r'app/static/movie-sessions-full.json', encoding='UTF-8') as f:
     json_str = f.read()
     json_array = loads(json_str, encoding='UTF-8')
     # Сортируем список по компаратору в порядке убывания
