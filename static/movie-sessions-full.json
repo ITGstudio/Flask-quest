@@ -1,0 +1,82 @@
+[
+  {
+    "filmName": "Гарри Поттер и черная магия",
+    "cinemaName": "Формула кино Сити",
+    "startTime": "15:40",
+    "image": "1.jpg",
+    "distance": 5,
+    "price": 400,
+    "rating": 7,
+    "3D": true
+  },
+  {
+    "filmName": "Лего-фильм 2",
+    "cinemaName": "Формула кино Сити",
+    "startTime": "19:30",
+    "image": "2.jpg",
+    "distance": 5,
+    "price": 500,
+    "rating": 8.3,
+    "3D": false
+  },
+  {
+    "filmName": "Лего-фильм 2",
+    "cinemaName": "5 звезд на Новокузнецкой",
+    "startTime": "18:00",
+    "image": "2.jpg",
+    "distance": 10,
+    "price": 250,
+    "rating": 8.6,
+    "3D": false
+  },
+  {
+    "filmName": "Зеленая книга",
+    "cinemaName": "Пионер",
+    "startTime": "15:00",
+    "image": "3.jpg",
+    "distance": 12,
+    "price": 700,
+    "rating": 9.3,
+    "3D": false
+  },
+  {
+    "filmName": "Зеленая книга",
+    "cinemaName": "Формула кино Сити",
+    "startTime": "19:40",
+    "image": "3.jpg",
+    "distance": 5,
+    "price": 450,
+    "rating": 8.3,
+    "3D": false
+  },
+  {
+    "filmName": "Тетрадь дружбы Нацумэ",
+    "cinemaName": "Синема парк Метрополис",
+    "startTime": "21:00",
+    "image": "4.jpg",
+    "distance": 7,
+    "price": 410,
+    "rating": 7.6,
+    "3D": false
+  },
+  {
+    "filmName": "Честный человек",
+    "cinemaName": "Пионер",
+    "startTime": "17:40",
+    "image": "5.jpg",
+    "distance": 12,
+    "price": 450,
+    "rating": 9.3,
+    "3D": false
+  },
+  {
+    "filmName": "Честный человек",
+    "cinemaName": "Кинозал ГУМа",
+    "startTime": "19:00",
+    "image": "5.jpg",
+    "distance": 8,
+    "price": 1500,
+    "rating": 8.6,
+    "3D": false
+  }
+]

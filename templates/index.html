@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <title>Куда сводить девушку на 8 марта</title>
+    <link href="static/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="info">
+        <h1 id="films">Films</h1><span>Designed by <a href='#'>Ilya Reznik</a></span>
+    </div>
+    <!-- создадим карточку для каждого фильма -->
+    {% for film in films %}
+    <div class="column">
+        <!-- Post-->
+        <div class="post-module hover">
+            <!-- Thumbnail-->
+            <div class="thumbnail">
+                <!-- извлечем мз объекта название картинки -->
+                <img src="static/images/{{film.image}}"/>
+            </div>
+            <!-- Post Content-->
+            <div class="post-content">
+                <!-- извлечем мз объекта рейтинг -->
+                <div class="category">{{film.filmRating}}</div>
+                <!-- извлечем мз объекта название фильма -->
+                <h1 class="title">{{film.filmName}}</h1>
+                <!-- извлечем мз объекта название кинотеатра -->
+                <h2 class="sub_title">{{film.cinemaName}}</h2>
+                <p class="description">
+                    <!-- извлечем мз объекта время начала -->
+                    Начало: {{film.startTime}}
+                    <br>
+                    <!-- извлечем мз объекта дистанцию -->
+                    Расстояние до кинотеатра: {{film.distance}} км
+                    <br>
+                    <!-- извлечем мз объекта информацию о наличии 3D и вставим "Есть" или "Нет" -->
+                    3D: {% if film.film3d %}Есть{% else %}Нет{% endif %}
+                </p>
+                <!-- извлечем мз объекта цену и номер фильма -->
+                <div><span id="price">{{film.price}}</span>₽ <div id="number">{{film.filmID}}</div></div>
+            </div>
+        </div>
+    </div>
+    <!-- конец блока -->
+    {% endfor %}
+</div>
+</body>
+</html>
