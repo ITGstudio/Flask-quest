@@ -60,19 +60,20 @@ def index():
 
 
 # если запущен файл, считываем JSON
+with open(r'static/movie-sessions-full.json', encoding='UTF-8') as f:
+    json_str = f.read()
+    json_array = loads(json_str, encoding='UTF-8')
+    # Сортируем список по компаратору в порядке убывания
+    json_array = sorted(json_array, key=cmp_to_key(compare), reverse=True)
+    films = []
+    count = 1
+    for i in json_array:
+        # заполняем список films
+        new_film = Film(count, i['filmName'], i['cinemaName'], i['startTime'], i['image'], i['distance'], i['price'], i['rating'],
+                        i['3D'])
+        films.append(new_film)
+        count += 1
+
 if __name__ == "__main__":
-    with open(r'static/movie-sessions-full.json', encoding='UTF-8') as f:
-        json_str = f.read()
-        json_array = loads(json_str, encoding='UTF-8')
-        # Сортируем список по компаратору в порядке убывания
-        json_array = sorted(json_array, key=cmp_to_key(compare), reverse=True)
-        films = []
-        count = 1
-        for i in json_array:
-            # заполняем список films
-            new_film = Film(count, i['filmName'], i['cinemaName'], i['startTime'], i['image'], i['distance'], i['price'], i['rating'],
-                            i['3D'])
-            films.append(new_film)
-            count += 1
     # запускаем сервер на порте 8080
     app.run('127.0.0.1', 8080)
